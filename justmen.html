@@ -1,0 +1,1076 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JUSTMEN</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-+Lw9CptG9s..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <style>
+        
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Stack+Sans+Headline:wght@200..700&family=Stack+Sans+Notch:wght@200..700&family=Stack+Sans+Text:wght@200..700&display=swap');
+
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            
+            
+        }
+        html{
+            max-width: 100%;
+            width: 100%;
+            overflow-x: hidden;
+        }
+        .maxWrap{
+            max-width: 100%;
+            width: 100%;
+            background-color: black;
+            color: white;
+            padding: 5px;
+        }
+        .header{
+            max-width: 100%;
+            width: 100%;
+            padding: 5px;
+            display: flex;
+            background-color: black;
+            border-bottom: 1px solid white;
+            position:fixed;
+            top: 0px;
+            left: 0px;
+            z-index: 999;
+        
+        }
+        .logos{
+            width: 20%;
+            display: flex;
+            gap: 10px;
+        }
+        .logo img{
+            width: 100px;
+            height: auto;
+            border-radius: 30px;
+            
+        }
+        .logo img:hover{
+            cursor: pointer;
+            transition: all 0.4s ease-in-out;
+            transform: scale(1.1);
+
+        }
+        .logot{
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: bold;
+            font-size: 40px;
+            color: rgb(211, 173, 7);
+            align-self: center;
+            padding-bottom: 10px;
+
+        }
+        .Spatc{
+                width: 50%;
+                display: flex;
+                align-self: center;
+                justify-content: center;
+                gap: 30px;
+                padding-left: 250px;
+        }
+        .services, .products, .about, .team, .portfolio, .contact{
+            font-size: 25px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .services{
+            color:rgb(211, 173, 7);
+        }
+        .services:hover, .products:hover, .about:hover,.team:hover, .portfolio:hover, .contact:hover{
+            color: rgb(211, 173, 7);
+            cursor: pointer;
+            border-bottom: 2px solid rgb(211, 173, 7);
+            transition: all .3s ease-in-out;
+        }
+        .scn{
+            width: 20%;
+            display: flex;
+            justify-content: flex-end;
+            align-self: center;
+            gap: 20px;
+            margin-left: 200px;
+        }
+        .fa-magnifying-glass, .fa-cart-arrow-down,  .fa-bars{
+            font-size: 30px;
+            color: white;
+            
+        }
+        .fa-magnifying-glass:hover, .fa-cart-arrow-down:hover,  .fa-bars:hover{
+            color: rgb(211, 173, 7);
+            cursor: pointer;
+        }
+        .search{
+            position: absolute;
+            right: 0%; top: 150px;
+            display: flex;
+            align-items: center;
+            transform: scaleY(0);
+            transform-origin: top;
+            opacity: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            
+        }
+        .search.active{
+            transform: scaleY(1);
+            opacity: 1;
+            max-height: 50px;
+        }
+        .search input{
+            width: 250px;
+            height: 40px;
+            border-radius: 10px;
+        }
+        .search input::placeholder{
+            font-size: 20px;
+            font-weight: bold;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            padding-left: 10px;
+        }
+        .search label{
+            color: black;
+            position: absolute;
+            right: 2%;
+            font-size: 20px;
+            font-weight: light;
+            
+        }
+        .search label:hover{
+            color:  rgb(211, 173, 7);
+        }
+        Section{
+             max-width: 100%;
+            width: 100%;
+            padding: 5px;
+            background-image: url(images/JustMen/bgmenaccess21.png);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: auto;
+            padding-bottom: 250px;
+            padding-top: 200px;
+        }
+        .catchPhraseCon{
+            display: flex;
+            flex-direction: column;
+            margin: 200px 0px 0px 50px;
+            align-items: center;
+            
+        }
+        .catchPhrase1, .catchPhrase2{
+            font-size: 100px;
+            font-weight: bold;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        .catchPhrase3{
+            font-size: 40px;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+        }
+        .catchButton button{
+            width: 200px;
+            padding: 15px;
+            font-size: 20px;
+            font-weight: bold;
+            border-radius: 15px;
+            background-color: rgb(211, 173, 7);
+            margin-top: 30px;
+            color: white;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .shake-vertical button:hover{
+            cursor: pointer;
+            background-color: goldenrod;
+            transform: scale(1.1);
+            transition: all .3s ease-in-out;
+	-webkit-animation: shake-vertical 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+	        animation: shake-vertical 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+}
+
+@-webkit-keyframes shake-vertical {
+  0%,
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  10%,
+  30%,
+  50%,
+  70% {
+    -webkit-transform: translateY(-8px);
+            transform: translateY(-8px);
+  }
+  20%,
+  40%,
+  60% {
+    -webkit-transform: translateY(8px);
+            transform: translateY(8px);
+  }
+  80% {
+    -webkit-transform: translateY(6.4px);
+            transform: translateY(6.4px);
+  }
+  90% {
+    -webkit-transform: translateY(-6.4px);
+            transform: translateY(-6.4px);
+  }
+}
+@keyframes shake-vertical {
+  0%,
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  10%,
+  30%,
+  50%,
+  70% {
+    -webkit-transform: translateY(-8px);
+            transform: translateY(-8px);
+  }
+  20%,
+  40%,
+  60% {
+    -webkit-transform: translateY(8px);
+            transform: translateY(8px);
+  }
+  80% {
+    -webkit-transform: translateY(6.4px);
+            transform: translateY(6.4px);
+  }
+  90% {
+    -webkit-transform: translateY(-6.4px);
+            transform: translateY(-6.4px);
+  }
+}
+
+.product{
+    width: 52%;
+    height: 400px;
+    background-color: white;
+    border: 2px solid black;
+    position: absolute;
+    top: 101%;
+    right: 30%;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    border-radius: 20px;
+    transform: scaleY(0);
+    transform-origin: top;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.4s ease;
+
+}
+.product.active{
+    transform: scaleY(1);
+    opacity: 1;
+    max-height: 450%;
+}
+.wrist1, .shoes1, .hat-cap1, .wallet1{
+color: black;
+display: flex;
+padding-left: 20px;
+gap: 5px;
+}
+.hat-cap1{
+    padding-left: 20px;
+}
+.wristImage img, .shoeImage img, .hatImage img, .walletImage img{ 
+    width: 80px;
+    height: 50px;
+}
+
+.wtitle, .stitle, .htitle, .wtitle{
+    font-size: 30px;
+    font-weight: bold;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding-top: 10px;
+    text-decoration: underline;
+}
+.wristList, .shoeList, .hat-capList, .walletList{
+    color: black;
+    padding: 25px 0px 0px 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.walletList{
+    padding: 25px 0px 0px 100px;
+}
+.rolex:hover, .patek:hover, .audemars:hover, .Omega:hover, .Tag:hover, .breitling:hover{
+    color: rgb(211, 173, 7);
+    cursor: pointer;
+    text-decoration: underline;
+    
+
+}
+.nike:hover, .adidas:hover, .new:hover, .puma:hover, .clarks:hover, .cole:hover, .asics:hover, .skechers:hover, .salvatore:hover{
+     color: rgb(211, 173, 7);
+    cursor: pointer;
+    text-decoration: underline;
+}
+.New:hover, .stetson:hover, .kangol:hover{
+     color: rgb(211, 173, 7);
+    cursor: pointer;
+    text-decoration: underline;
+}
+.louis:hover, .gucci:hover, .montblanc:hover, .bottega:hover, .bellroy:hover{
+     color: rgb(211, 173, 7);
+    cursor: pointer;
+    text-decoration: underline;
+}
+.services2{
+    width: 100%;
+    max-width: 100%;
+    background-color: white;
+    padding: 150px 20px 150px 20px;
+    
+    color: black;
+}
+.serviceText, .portText{
+    width: 100%;
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding-bottom: 80px;
+}
+.portText{
+    padding-bottom: 0px;
+}
+.portText2{
+     width: 100%;
+    text-align: center;
+    font-size: 25px;
+    font-weight: lighter;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding-bottom: 50px;
+}
+.sma{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 150px;
+
+}
+.saleWrap{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 400px;
+}
+
+.sale{
+    width: 300px;
+    height: 300px;
+    background-color: gold;
+    border-radius: 50%;
+    margin-left: 50px;
+}
+.saleIcon img{
+    width:250px;
+    height: 250px;
+    padding-top: 50px;
+    padding-left: 30px;
+}
+.saleText1{
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+      
+.saleText2{
+    text-align: center;
+    font-size: 20px;
+    font-weight: light;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.port{
+     width: 100%;
+    max-width: 100%;
+    background-color: rgb(245, 245, 245);
+    padding: 150px 20px 100px 20px;
+    color: black;
+    
+}
+.ssw{
+     width: 100%;
+     display: flex;
+     gap: 50px;
+    }
+marquee{
+color: black;
+}
+.shirtWrap{
+width: 20%;
+height: auto;
+background-color: white;
+border-radius: 20px;
+}
+.shirtImage img{
+    width: 410px;
+    height: 450px;
+}
+.st1{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    padding-top: 20px;
+
+}
+.st2{
+    text-align: center;
+    font-size: 20px;
+
+}
+.price{
+     text-align: center;
+    font-size: 20px;
+    padding-bottom: 50px;
+    padding-top: 20px;
+    font-weight: bold;
+}
+.abouto, .contacting{
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    padding-bottom: 100px;
+    padding-top: 50px;
+}
+.aboutUs, .contactUs{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+.aboutText, .us, .contactText{
+    font-size: 40px;
+    font-weight: bold;
+
+}
+.aboutText, .contactText{
+    color: rgb(211, 173, 7);
+}
+.imageAbout{
+    width: 100%;
+    display: flex;
+    gap: 0px;
+    justify-content: center;
+
+}
+.extra img{
+    width: 900px;
+    height: auto;
+
+}
+.map iframe{
+    width: 900px;
+    height: 600px;
+
+}
+.extraText{
+    width: 900px;
+    height: auto;
+    background-color: white;
+}
+.extraConText{
+    position: relative;
+     width: 900px;
+    height: 600;
+    background-color: rgb(22, 21, 21);
+    color: white;
+}
+.extraTextHeader{
+    color: black;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 30px;
+    font-size: 55px;
+    font-weight: bold;
+    text-decoration: underline;
+    font-style: oblique;
+
+}
+.extraConTextHeader{
+     color: white;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 30px;
+    font-size: 55px;
+    font-weight: bold;
+    text-decoration: underline;
+    font-style: oblique;
+}
+.extraTextPara{
+    color: black;
+    text-align: center;
+    margin-left: 40px;
+    margin-right: 40px;
+    font-size: 35px;
+}
+.teammates{
+     width: 100%;
+    background-color: white;
+    padding-top: 130px;
+    padding-bottom: 80px;
+}
+.oat{
+color: black;
+text-align: center;
+font-size: 50px;
+}
+.oat1{
+    color: rgb(211, 173, 7);
+}
+
+.oat2{
+color: black;
+text-align: center;
+font-size: 20px;
+font-weight: lighter;
+margin-bottom: 150px;
+}
+.flexWrap{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+.team1Wrap{
+    width: 30%;
+    height: auto;
+}
+.team1Image img{
+    width: 300px;
+    height: 400px;
+    border-radius: 100px;
+    margin-left: 160px;
+    border: 5px solid rgb(211, 173, 7);
+}
+.team1Name{
+    text-align: center;
+    color: black;
+    font-size: 40px;
+    font-weight: bold;
+    font-style: oblique;
+    margin-bottom: 10px;
+}
+.team1Post{
+    text-align: center;
+    color: black;
+    font-size: 25px;
+    font-weight: bold;
+    font-style: oblique;
+    font-family: cursive;
+}
+.team1Socials{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.team1f, .team1x, .team1l{
+    width: 40px;
+    background-color: black;
+    height: 40px;
+    border-radius: 100%;
+    padding: 13px;
+    margin-top: 20px;
+
+}
+.team1f:hover, .team1x:hover, .team1l:hover{
+    cursor: pointer;
+}
+.fa-facebook-f{
+
+    font-size: 20px;
+}
+.name input, .email input, .phone input{
+    width: 600px;
+    margin-left: 150px;
+    height: 40px;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid white;
+    margin-bottom: 30px;
+    padding-left: 20px;
+    color: white;
+    font-size: 15px;
+}
+.name input::placeholder, .email input::placeholder, .phone input::placeholder{
+    padding-left: 30px;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    font-style: italic;
+}
+.fa-user{
+    position: absolute;
+    font-size: 20px;
+    left: 150px;
+    top: 150px;
+}
+.fa-envelope{
+    position: absolute;
+    font-size: 20px;
+    left: 150px;
+    top: 220px;
+}
+.fa-phone{
+    position: absolute;
+    font-size: 20px;
+    left: 150px;
+    top: 290px;
+}
+.conButton{
+    display: flex;
+    justify-content: center;
+}
+.conButton button{
+    text-align: center;
+    width: 200px;
+    padding: 20px;
+    font-size: 25px;
+    background-color: rgb(211, 173, 7);
+    border-radius: 30px;
+    color: white;
+    font-weight: bold;
+    margin-top: 40px;
+}
+.conButton button:hover{
+    background-color: rgba(211, 173, 7, 0.849);
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+footer{
+    width: 100%;
+    background-color: rgb(22, 21, 21);
+    padding: 10px;
+}
+.allSocials{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.facebook, .twitter, .instagram, .linkdin, .pinterest{
+    width: 45px;
+    background-color: black;
+    border: 2px solid white;
+    height: 45px;
+    padding: 8px;
+    border-radius: 100%;
+    
+    
+}
+.facebook:hover, .twitter:hover, .instagram:hover, .linkdin:hover, .pinterest:hover{
+    border: 2px solid rgb(211, 173, 7);
+}
+.face, .tweet, .insta, .link, .inter{
+    font-size: 30px;
+}
+.face:hover, .tweet:hover, .insta:hover, .link:hover, .inter:hover{
+    color: rgb(211, 173, 7);
+}
+.lastSen{
+    text-align: center;
+    padding-top: 20px;
+    font-size: 30px;
+}
+.sir{
+    color: rgb(211, 173, 7);
+    
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="maxWrap">
+        <header class="header">
+         <div class="logos">
+            <div class="logo" onclick="sectScroll()"><img src="images/JustMen/logojustmengold2.png" ></div>
+            <div class="logot">JustMen!</div>
+         </div>
+         <div class="Spatc">
+            <div class="services" onclick="serviceScroll()" >Services</div>
+            <div class="products" onclick="production()">Products <i class="fa-solid fa-angle-down"></i></div>
+            <div class="portfolio" onclick="portScroll()">Portfolio</div>
+            <div class="about" onclick="aboutScroll()">About</div>
+            <div class="team" onclick="teamScroll()">Team</div>
+            <div class="contact" onclick="contactScroll()">Contact</div>
+         </div>
+         <div class="scn">
+            <i class="fa-solid fa-magnifying-glass" onclick="search()"></i>
+            <i class="fa-solid fa-cart-arrow-down"></i>
+            <i class="fa-notdog fa-solid fa-bars"></i>
+         </div>
+         <div class="search">
+            <input class="searchBox" type="search" placeholder="Search here">
+            <label for="searchBox" class= "fa-sharp-duotone fa-solid fa-magnifying-glass"></label>
+         </div>
+         <div class="product">
+            <div class="wrist">
+                <div class="wrist1">
+                    <div class="wristImage"><img src="images/JustMen/wristwatchicon.png"/> </div>
+                <div class="wtitle">Wristwatches</div>
+                </div>
+                <div class="wristList">
+                    <div class="rolex">• Rolex</div>
+                    <div class="patek">• Patek Phillipe</div>
+                    <div class="audemars">• Audemars Piguet</div>
+                    <div class="Omega">• Omega</div>
+                    <div class="Tag">• Tag Heuer</div>
+                    <div class="breitling">• Breitling</div>
+                </div>
+
+            </div>
+            <div class="shoes">
+                <div class="shoes1">
+                    <div class="shoeImage"><img src="images/JustMen/shoeicon.png"/> </div>
+                <div class="stitle">Shoes</div>
+                </div>
+                <div class="shoeList">
+                    <div class="nike">• Nike</div>
+                    <div class="adidas">• Adidas</div>
+                    <div class="new">• New Balance</div>
+                    <div class="puma">• Puma</div>
+                    <div class="clarks">• Clarks</div>
+                    <div class="cole">• Cole Haan</div>
+                    <div class="asics">• ASICS</div>
+                    <div class="skechers">• Skechers</div>
+                    <div class="salvatore">• Salvatore Ferragamo</div>
+                </div>
+            </div>
+            <div class="hat-cap">
+                <div class="hat-cap1">
+                    <div class="hatImage"><img src="images/JustMen/haticon.png"/> </div>
+                <div class="htitle">Hats&Caps</div>
+                </div>
+                <div class="hat-capList">
+                    <div class="New">• New Era</div>
+                    <div class="stetson">• Stetson</div>
+                    <div class="kangol">• Kangol</div>
+                </div>
+            </div>
+            <div class="wallet">
+                <div class="wallet1">
+                    <div class="walletImage"><img src="images/JustMen/walleticon.png"/> </div>
+                <div class="wtitle">Wallets</div>
+                </div>
+                <div class="walletList">
+                    <div class="louis">• Louis Vuitton</div>
+                    <div class="gucci">• Gucci</div>
+                    <div class="montblanc">• Montblanc</div>
+                    <div class="bottega">• Bottega Veneta</div>
+                    <div class="bellroy">• Bellroy</div>
+                </div>
+            </div>
+         </div>
+        </header>
+        <Section class="sect">
+            <div class="catchPhraseCon">
+                <div class="catchPhrase1">FOR THE MODERN</div>
+            <div class="catchPhrase2">GENTLEMAN</div>
+            <div class="catchPhrase3">"Accessories for the bold, crafted for the modern man"</div>
+            <div class="catchButton shake-vertical"><button>GET IT HERE</button></div>
+            </div>
+        </Section>
+        <div class="services2">
+            <div class="serviceText">SERVICES</div>
+            <div class="sma">
+                <div class="saleWrap">
+                        <div class="sale">
+    <div class="saleIcon"><img src="images/JustMen/saleicon.png"/> </div>
+    </div>
+    <div class="saleText1">SALE</div>
+    <div class="saleText2">Unlock unbeatable style with Just Men Accessories. Premium watches, shoes, hats, wallets, and more—carefully curated for the modern man. Quality, affordability, and class in every detail.</div>
+
+                </div>
+                <div class="saleWrap">
+                        <div class="sale">
+    <div class="saleIcon"><img src="images/JustMen/marketicon.png"/> </div>
+    </div>
+    <div class="saleText1">MARKETING</div>
+    <div class="saleText2">Just Men Accessories elevates every man’s style with bold, refined essentials. Our marketing focuses on quality, confidence, and craftsmanship—connecting modern gentlemen to accessories that define their presence.</div>
+
+                </div>
+                <div class="saleWrap">
+                        <div class="sale">
+    <div class="saleIcon"><img src="images/JustMen/customercareicon.png"/> </div>
+    </div>
+    <div class="saleText1">CUSTOMER-CARE</div>
+    <div class="saleText2">Just Men Accessories delivers exceptional customer care—fast support, clear communication, and a commitment to satisfaction. Your style, comfort, and confidence always come first.</div>
+
+                </div>
+            </div>
+            
+        </div>
+        <div class="port">
+             <div class="portText">PORTFOLIO</div>
+             <div class="portText2">Where Style Meets Confidence</div>
+             <marquee direction="left" behavior="scroll" >
+             <div class="ssw">
+                    <div class="shirtWrap">
+                <div class="shirtImage"><img src="images/JustMen/cshirt.png"/> </div>
+                <div class="st1">SHIRT</div>
+                <div class="st2">Fitted, classy and unique</div>
+                <div class="price">PRICE: $147</div>
+             </div>
+             <div class="shirtWrap">
+                <div class="shirtImage"><img src="images/JustMen/chat.png"/> </div>
+                <div class="st1">HAT</div>
+                <div class="st2">Fitted, classy and unique</div>
+                <div class="price">PRICE: $42</div>
+             </div>
+             <div class="shirtWrap">
+                <div class="shirtImage"><img src="images/JustMen/p1.jpeg"/> </div>
+                <div class="st1">PERFUME</div>
+                <div class="st2">Scented, classy and unique</div>
+                <div class="price">PRICE: $83</div>
+             </div>
+             <div class="shirtWrap">
+                <div class="shirtImage"><img src="images/JustMen/cbracelet.png"/> </div>
+                <div class="st1">GOLDEN BRACELET</div>
+                <div class="st2">Fitted, classy and unique</div>
+                <div class="price">PRICE: $190</div>
+             </div>
+             <div class="shirtWrap">
+                <div class="shirtImage"><img src="images/JustMen/bag1.jpeg"/> </div>
+                <div class="st1">BAG</div>
+                <div class="st2">Fitted, classy and unique</div>
+                <div class="price">PRICE: $60</div>
+             </div>
+             <div class="shirtWrap">
+                <div class="shirtImage"><img src="images/JustMen/ww2.jpeg"/> </div>
+                <div class="st1">WRISTWATCH</div>
+                <div class="st2">Fitted, classy and unique</div>
+                <div class="price">PRICE: $115</div>
+             </div>
+             <div class="shirtWrap">
+                <div class="shirtImage"><img src="images/JustMen/br1.jpeg"/> </div>
+                <div class="st1">BLACK BRACELET</div>
+                <div class="st2">Fitted, classy and unique</div>
+                <div class="price">PRICE: $38</div>
+             </div>
+             <div class="shirtWrap">
+                <div class="shirtImage"><img src="images/JustMen/cl3.jpeg"/> </div>
+                <div class="st1">T-SHIRT</div>
+                <div class="st2">Fitted, classy and unique</div>
+                <div class="price">PRICE: $37</div>
+             </div>
+             <div class="shirtWrap">
+                <div class="shirtImage"><img src="images/JustMen/cl1.jpeg"/> </div>
+                <div class="st1">SUIT</div>
+                <div class="st2">Fitted, classy and unique</div>
+                <div class="price">PRICE: $450</div>
+             </div>
+             <div class="shirtWrap">
+                <div class="shirtImage"><img src="images/JustMen/cl2.jpeg"/> </div>
+                <div class="st1">FULL BODY</div>
+                <div class="st2">Fitted, classy and unique</div>
+                <div class="price">PRICE: $270</div>
+             </div>
+             <div class="shirtWrap">
+                <div class="shirtImage"><img src="images/JustMen/cnike.png"/> </div>
+                <div class="st1">NIKE SHOE</div>
+                <div class="st2">Fitted, classy and unique</div>
+                <div class="price">PRICE: $115</div>
+             </div>
+             <div class="shirtWrap">
+                <div class="shirtImage"><img src="images/JustMen/cofficialshoe.png"/> </div>
+                <div class="st1">SHOE</div>
+                <div class="st2">Fitted, classy and unique</div>
+                <div class="price">PRICE: $360</div>
+             </div>
+             <div class="shirtWrap">
+                <div class="shirtImage"><img src="images/JustMen/extra1.jpeg"/> </div>
+                <div class="st1">SILKY TIE</div>
+                <div class="st2">Fitted, classy and unique</div>
+                <div class="price">PRICE: $15</div>
+             </div>
+             <div class="shirtWrap">
+                <div class="shirtImage"><img src="images/JustMen/extra2.jpeg"/> </div>
+                <div class="st1">BELT</div>
+                <div class="st2">Fitted, classy and unique</div>
+                <div class="price">PRICE: $22</div>
+             </div>
+             <div class="shirtWrap">
+                <div class="shirtImage"><img src="images/JustMen/extra3.jpeg"/> </div>
+                <div class="st1">KICKS</div>
+                <div class="st2">Fitted, classy and unique</div>
+                <div class="price">PRICE: $59</div>
+             </div>
+             <div class="shirtWrap">
+                <div class="shirtImage"><img src="images/JustMen/ww3.jpeg"/> </div>
+                <div class="st1">SMART WATCH</div>
+                <div class="st2">Fitted, classy and unique</div>
+                <div class="price">PRICE: $92</div>
+             </div>
+             </div>
+            </marquee>
+        </div>
+        <div class="abouto">
+            <div class="aboutUs">
+                <div class="aboutText">About</div>
+                <div class="us"> Us</div>
+            </div>
+            <div class="imageAbout">
+                <div class="extra"><img src="images/JustMen/bgmenaccess11.png"/></div>
+                <div class="extraText">
+                    <div class="extraTextHeader">Just Men Accessories</div>
+                    <div class="extraTextPara">At Just Men Accessories, we believe style is a statement—and every man deserves to make his boldly. We specialize in premium, fitted, and uniquely crafted male accessories designed to elevate confidence and complete every look.
+Our collection is built on quality, precision, and timeless appeal, ensuring that each piece not only complements your style but also speaks to who you are.
+For the modern gentleman, we deliver excellence—one accessory at a time. </div>
+                </div>
+            </div>
+        </div>
+        <div class="teammates">
+            <div class="oat"><span >Our Amazing</span>
+            <span class="oat1">Team</span></div>
+            <div class="oat2">"A great team isn’t built on perfect people, but on people who perfectly trust one another"</div>
+            <div class="flexWrap">
+                <div class="team1Wrap">
+                    <div class="team1Image"><img src="images/JustMen/team1.jpg"/> </div>
+                    <div class="team1Name">Michael Boluwatife</div>
+                    <div class="team1Post">Web Developer</div>
+                    <div class="team1Socials">
+                        <div class="team1f"><i class="fa-brands fa-facebook-f"></i></div>
+                        <div class="team1l"><i class="fa-brands fa-linkedin-in"></i></div>
+                        <div class="team1x"><i class="fa-brands fa-twitter"></i></div>
+                    </div>
+                </div>
+                <div class="team1Wrap">
+                    <div class="team1Image"><img src="images/JustMen/team2.1.jpeg"/> </div>
+                    <div class="team1Name">Ethan Miller</div>
+                    <div class="team1Post">Sales Lead</div>
+                    <div class="team1Socials">
+                        <div class="team1f"><i class="fa-brands fa-facebook-f"></i></div>
+                        <div class="team1l"><i class="fa-brands fa-linkedin-in"></i></div>
+                        <div class="team1x"><i class="fa-brands fa-twitter"></i></div>
+                    </div>
+                </div>
+                <div class="team1Wrap">
+                    <div class="team1Image"><img src="images/JustMen/team3.0.0.png"/> </div>
+                    <div class="team1Name">Jamal Thompson</div>
+                    <div class="team1Post">Lead Designer</div>
+                    <div class="team1Socials">
+                        <div class="team1f"><i class="fa-brands fa-facebook-f"></i></div>
+                        <div class="team1l"><i class="fa-brands fa-linkedin-in"></i></div>
+                        <div class="team1x"><i class="fa-brands fa-twitter"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="contacting">
+            <div class="contactUs">
+                <div class="contactText">Contact</div>
+                <div class="us"> Us</div>
+            </div>
+            <div class="imageAbout">
+                <div class="map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3902.651677503103!2d8.556616675713624!3d11.998586735461966!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x11ae816fc5487125%3A0x50dc6c70f198febc!2sMurtala%20Muhammad%20Library%20Complex!5e0!3m2!1sen!2sng!4v1763610052272!5m2!1sen!2sng" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+                <div class="extraConText">
+                    <div class="extraConTextHeader">Get In Touch</div>
+                    <div class="name"><input type="text" placeholder="Enter your name"/> </div>
+                    <div class="user"><i class="fa-regular fa-user"></i></div>
+                    <div class="email"><input type="text" placeholder="Enter your E-mail"/> </div>
+                    <div class="envelope"><i class="fa-regular fa-envelope"></i></div>
+                    <div class="phone"><input type="number" placeholder="Enter your Phone number"/> </div>
+                    <div class="telephone"><i class="fa-solid fa-phone"></i></div>
+                    <div class="conButton"><button>Contact Now</button> </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="allSocials">
+                <div class="facebook"><i class="fa-brands fa-facebook-f face"></i></div>
+                <div class="twitter"><i class="fa-brands fa-twitter tweet"></i></div>
+                <div class="instagram"><i class="fa-brands fa-instagram insta"></i></div>
+                <div class="linkdin"><i class="fa-brands fa-linkedin-in link"></i></div>
+                <div class="pinterest"><i class="fa-brands fa-pinterest-p inter"></i></div>
+            </div>
+            <div class="lastSen"><span>Created by</span><span class="sir"> Sir_Tife </span><span>| All Rights Reserved</span><span></span> </div>
+        </footer>
+    </div>
+</body>
+<script>
+ let searchIcon = document.querySelector(".fa-magnifying-glass");
+ let searchBox = document.querySelector(".search")
+
+ function search(){
+    searchBox.classList.toggle("active");
+ }
+
+ let pro = document.querySelector(".products");
+ let prod = document.querySelector(".product")
+
+ function production(){
+    prod.classList.toggle("active");
+ }
+
+serviceSect= document.querySelector(".services2");
+serviceClick = document.querySelector(".services");
+
+function serviceScroll() {
+    serviceSect.scrollIntoView({behavior: "smooth"});
+}
+
+portSect = document.querySelector(".port");
+portClick = document.querySelector(".portfolio");
+
+function portScroll(){
+    portSect.scrollIntoView({behavior: "smooth"});
+}
+
+logoClick = document.querySelector(".logo");
+sectSect = document.querySelector(".sect")
+
+function sectScroll(){
+    sectSect.scrollIntoView({behavior: "smooth"});
+
+}
+
+aboutClick = document.querySelector(".about");
+aboutSect = document.querySelector(".abouto");
+
+function aboutScroll(){
+    aboutSect.scrollIntoView({behavior: "smooth"});
+}
+
+teamClick = document.querySelector(".team");
+teamSect = document.querySelector(".teammates");
+
+function teamScroll() {
+    teamSect.scrollIntoView({behavior: "smooth"});
+
+    }
+
+    contactClick = document.querySelector(".contact");
+    contactSect = document.querySelector(".contacting");
+
+    function contactScroll(){
+        contactSect.scrollIntoView({behavior: "smooth"});
+    }
+
+</script>
+</html>
